@@ -1,8 +1,19 @@
 # config.py
 
+import os
+
 # --- File Paths ---
 DATA_PATH = 'cars_data_clean.csv'
-MODEL_PATH = 'car_price_model.joblib'
+
+# --- Directories ---
+# Using os.path.join for better cross-platform compatibility
+MODEL_DIR = "models"
+REPORTS_DIR = "reports"
+
+# --- File Paths for Artifacts ---
+# We'll create the reports directory if it doesn't exist
+METRICS_FILE = os.path.join(REPORTS_DIR, "metrics.json")
+
 
 # --- Feature Definitions ---
 # Using the EXACT column names from your file
